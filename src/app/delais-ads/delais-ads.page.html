@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="PresentAlert()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class ="ion-margin">
+    <strong>Détails de cette annonce</strong>
+    <ion-grid>
+       <ion-row>
+         <ion-col size="4" offset="4">
+          <img src="selectedAds.image" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="8" offset="2">
+          <ion-label>{{selectedAds.title }}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid >
+    <strong>Contenu de cette annonce</strong>
+    <br />
+    <ion-list  *ngIf="selectedAds">
+      <ion-item>
+        <ion-label>{{ selectedAds.description }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div></ion-content>

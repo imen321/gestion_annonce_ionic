@@ -1,0 +1,16 @@
+ion-toolbar ion-title {
+    text-align: center;
+  }
+  ion-footer ion-toolbar ion-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  ion-toolbar {
+    --background: #6DB9EF;
+    --color: #0a090ae1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }

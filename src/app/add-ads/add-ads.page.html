@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter des Annonces
+    </ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<br><br>
+<ion-content [fullscreen]="true">
+ 
+  <br>
+  <form #f="ngForm">
+    <ion-label>TITRE </ion-label>
+    <ion-input ngModel name="title" type="text"></ion-input>
+    <ion-label>IMAGE </ion-label>
+    <ion-input ngModel name="image" type="url"></ion-input>
+
+    <ion-label>DESCRIPTION </ion-label>
+    <ion-input ngModel name="description" type="text"></ion-input>
+    <ion-button (click)="onSubmit(f.value)"  expand="block"  style="--background: #6DB9EF " >Ajouter</ion-button>
+  </form>
+
+</ion-content>

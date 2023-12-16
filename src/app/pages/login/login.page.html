@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true"  class="page-login">
+  <div class="header">
+   
+    <h1>Login</h1>
+  </div>
+
+  <form>
+    <div class="ion-pudding">
+      <ion-item>
+        <ion-input placeholder="username" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+      <ion-input placeholder="password" class="input" type="password"></ion-input>
+      <ion-icon name="Lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="forgotpassword">
+        <a [routerLink]="['/reset-password']" style="color: #6DB9EF;">Forget password ?</a>
+      </div>
+      
+      <div class="signupLink">
+        <p>New member ? <a  style="color: #6DB9EF;" [routerLink]="['/signup']">Sign Up</a></p>
+      </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px; color: black;">
+      <ion-fab-button [routerLink]="['/home']">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    
+   
+  </form>
+</ion-content>
